@@ -20,6 +20,9 @@ public class Application {
         double temp2 = 360000.678999;
         System.out.println(temp2);
 
+        double temp3 = 378000.678999;
+        System.out.println(temp2);
+
         boolean isHappy = true;
         System.out.println(isHappy);
 
