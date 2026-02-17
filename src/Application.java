@@ -21,7 +21,7 @@ public class Application {
         System.out.println(temp2);
 
         double temp3 = 378000.678999;
-        System.out.println(temp2);
+        System.out.println(temp3);
 
         boolean isHappy = true;
         System.out.println(isHappy);
