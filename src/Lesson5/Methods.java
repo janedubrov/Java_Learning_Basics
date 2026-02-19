@@ -9,5 +9,6 @@ public class Methods {
 }
 static int calculateSalary(int hours, int rate){
         return hours * rate;
+
 }
 }
