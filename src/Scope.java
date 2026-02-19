@@ -1,14 +1,16 @@
 public class Scope {
+
     public static void main(String[] args) {
-        double priceCar = 10_000;
-        System.out.println("Old car price: "+ priceCar);
+     String item1 = "Laptop";
+     String address1 = "Berlin";
+     String item2 = "Camera";
+     String address2 = "Munchen";
+     sendPackage(item1, address1);
+     sendPackage(item1, address2);
 
-        if (priceCar > 9_000){
-            double discount = priceCar * 0.05;
-            System.out.println("Discount: " + discount);
-
-            double newPrice = priceCar - discount;
-            System.out.println("New price is " + newPrice);
         }
+        static void sendPackage(String cargo, String destination) {
+            System.out.println("Sending "+ cargo + " to "+ destination);
+        }
+
     }
-}

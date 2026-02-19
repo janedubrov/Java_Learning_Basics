@@ -31,5 +31,15 @@ public class Application {
 
         char c = 'c';
         System.out.println(c);
+
+        /** Comment
+         *
+         */
+
+        // FIXME - eto nado sdelat chut pozje
+        //
+
+
+
     }
 }
