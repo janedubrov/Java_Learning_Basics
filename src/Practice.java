@@ -26,7 +26,6 @@ public class Practice {
         else{
             System.out.println("You are NOT enrolled as a student");
         }
-
         input.close();
 
     }
