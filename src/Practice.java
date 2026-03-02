@@ -1,32 +1,31 @@
 import java.util.Scanner;
-
 public class Practice {
     public static void main(String[] args) {
 
-    Scanner input = new Scanner(System.in);
+        //  substring() is a method used to extract a portion of a string
+        //           .substring(start, end)
 
-        System.out.print("Enter your name: ");
-        String name = input.nextLine();
-        System.out.println("Hey " + name);
+        Scanner input = new Scanner(System.in);
+        String email;
+        String username;
+        String domain;
 
-        System.out.print("Enter your age: ");
-        int age = input.nextInt();
-        System.out.println("You are " + age+ " years old");
+        System.out.print("Please enter your email: ");
 
-        System.out.print("What is your temperature? ");
-        double temp = input.nextDouble();
-        System.out.println("oh, " + temp + " . You are warm enough :))");
+        email = input.nextLine();
 
-        System.out.print("Are yoou a student? (true / false): ");
-        boolean isStudent = input.nextBoolean();
+        if(email.contains("@")){
+            username = email.substring(0, email.indexOf("@"));
+            domain = email.substring(email.indexOf("@")+1);
 
-        if(isStudent){
-            System.out.println("You are enrolled as a student! ");
+            System.out.println(username);
+            System.out.println(domain);
         }
         else{
-            System.out.println("You are NOT enrolled as a student");
+            System.out.println("Your email must contain @");
         }
         input.close();
+         }
+        }
 
-    }
-}
+
