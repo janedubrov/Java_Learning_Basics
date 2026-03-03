@@ -2,54 +2,38 @@ import java.util.Scanner;
 
 public class Practice2 {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
-        String name;
-        int age;
-        boolean isStudent = true;
 
-        System.out.print("What is your name? ");
-        name = input.nextLine();
+        Double amountEuro;
+        Double amountDollars;
+        int choice;
+        double fee;
+        double custGets;
 
-        System.out.print("Please enter your age: ");
-        age = input.nextInt();
+        System.out.print("If you want to exchange euro to dollars, press '1', if dollars to euro, press '2' :");
+        choice = input.nextInt();
 
-        System.out.print("Are you a student? true or false only : ");
-        isStudent = input.nextBoolean();
+        if(choice == 1){
+            System.out.print("Enter the amount in EUR: ");
+            amountEuro = input.nextDouble();
+            amountDollars = amountEuro * 1.09;
+            fee = amountDollars * 0.03;
+            custGets = amountDollars - fee;
 
-        //Group 1:
-        if(name.isEmpty()){
-            System.out.println("You didn´t enter your name yet...");
+            System.out.printf("The amount in dollars is %.2f , the fee is : %.2f doll%n" , custGets,fee );
+        }
+        else if(choice == 2){
+            System.out.print("Enter the amount in DOLL: ");
+            amountDollars = input.nextDouble();
+            amountEuro = amountDollars * 0.92;
+            fee = amountEuro * 0.03;
+            custGets = amountEuro - fee;
+            System.out.printf("The amount in euro is %.2f , the fee is : %.2f eur%n" , custGets,fee );
         }
         else{
-            System.out.println("Hello, " + name);
+            System.out.println("Your choice is not valid. ");
         }
 
-        // Group 2:
-    if( age >= 65){
-        System.out.println("You are a senior!");
-    }
-    else if(age >= 18){
-        System.out.println("You are an adult!");
-    }
-    else if(age < 0){
-        System.out.println("You haven´t been born yet...");
-    }
-    else if (age==0){
-        System.out.println("You are a baby!");
-    }
-    else{
-        System.out.println("You are a child!");
-    }
-
-    // Group 3:
-    if(isStudent){
-        System.out.println("Cool, you are a student!");
-            }
-    else{
-        System.out.println("Maybe you will enroll later.");
-    }
-
-    input.close();
+        input.close();
     }
 }
