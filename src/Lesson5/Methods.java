@@ -22,11 +22,9 @@ public class Methods {
 
         input.close();
 
-
 }
         static double convertedTemp(double temp){
         return temp * 1.8 + 32;
-
         }
 
 }
