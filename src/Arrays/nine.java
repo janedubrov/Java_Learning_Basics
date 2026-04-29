@@ -12,7 +12,21 @@ public class nine {
 
         };
 
-        System.out.println(new2DArray(arr));
+        for(int i = 0; i < arr[0].length; i++){ // eto zagolovok tablicu
+            System.out.print(i + " ");
+
+        }
+        System.out.println();
+
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[i].length; j++){
+                System.out.print(arr[i][j] + " ");
+
+            }
+            System.out.println();
+
+
+        }
 
             }
 

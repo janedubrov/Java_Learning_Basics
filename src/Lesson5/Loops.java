@@ -3,19 +3,19 @@ package Lesson5;
 public class Loops {
     public static void main(String[] args) {
 
-        int time = 5;
-        int floor;
-        int totalTime = 0;
+   int food = 80;
+   int eatFood = 15;
+   int day;
 
-        for(floor = 1 ; floor <= 10; floor++){
-            totalTime = totalTime +time;
-            if(floor >= 7){
-                System.out.println("Floor " + floor + ":" + " Almost there. Time : " + totalTime + " sec");
+   for(day = 1 ; day <= 5; day++){
+       food = food - eatFood;
+       if(food < 30){
+           System.out.println("Low food " + food + " kg left");
+       }
+       else{
+           System.out.println("Day " + day + ": " + food + " kg left");
+       }
+   }
 
-            }
-            else{
-                System.out.println("Floor " + floor + ":" + " Moving... Time " + totalTime + " sec");
-            }
-        }
     }
 }

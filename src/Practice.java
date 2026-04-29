@@ -1,31 +1,38 @@
 import java.util.Scanner;
+
 public class Practice {
     public static void main(String[] args) {
+        Scanner input = new Scanner (System.in);
 
-        //  substring() is a method used to extract a portion of a string
-        //           .substring(start, end)
+        double temp;
+        double newtemp;
+        String unit;
 
-        Scanner input = new Scanner(System.in);
-        String email;
-        String username;
-        String domain;
+        System.out.print("Enter the temperature: ");
+        temp = input.nextDouble();
 
-        System.out.print("Please enter your email: ");
+        System.out.print("Convert to Celcius or Fahrenheit?  (C or F) : ");
+        unit = input.next().toUpperCase();
 
-        email = input.nextLine();
+        if(unit.equals("C")){
+            newtemp = (temp * 9/5) + 32;
+            System.out.println("The temperature in Fahrenheit is: " + newtemp + "F");
 
-        if(email.contains("@")){
-            username = email.substring(0, email.indexOf("@"));
-            domain = email.substring(email.indexOf("@")+1);
-
-            System.out.println(username);
-            System.out.println(domain);
         }
-        else{
-            System.out.println("Your email must contain @");
+        else if(unit.contains("F")){
+            newtemp = (temp - 32) / 1.8;
+            System.out.printf("The temperature in Celcius is: %.2f C", newtemp);
         }
+//        else{
+//            System.out.println("Please enter a valid temperature");
         input.close();
-         }
         }
+
+
+
+
+
+         }
+
 
 
